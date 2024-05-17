@@ -1,7 +1,3 @@
 [submodule "nvim"]
 	path = nvim
 	url = https://github.com/rmassaroni/rjvim
-[submodule "rjv"]
-	path = rjv
-	url = https://github.com/rmassaroni/rjvim
-	branch = main
