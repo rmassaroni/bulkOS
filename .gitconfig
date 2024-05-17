@@ -1,0 +1,7 @@
+[init]
+	defaultBranch = main
+[user]
+	email = robjmass@gmail.com
+	name = rjm
+[credential]
+	helper = cache
