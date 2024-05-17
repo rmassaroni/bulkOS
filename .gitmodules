@@ -1,4 +1,0 @@
-[submodule "rjvim"]
-	path = rjvim
-	url = https://github.com/rmassaroni/rjvim
-	branch = main
