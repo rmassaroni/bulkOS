@@ -9,6 +9,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+source ~/.aliases
 source ~/.local/share/zap/zap.zsh
 source ~/projects/gpush/gpush.sh
 
