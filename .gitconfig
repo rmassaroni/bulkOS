@@ -4,4 +4,4 @@
 	email = robjmass@gmail.com
 	name = rjm
 [credential]
-	helper = cache
+	helper = store
