@@ -3,6 +3,7 @@
 dir="$HOME/dotfiles"
 
 ignores=("install.sh" ".gitignore" ".gitmodules")
+shopt -s dotglob
 
 for file in "$dir"/*; do
     filename=$(basename "$file")
@@ -15,10 +16,9 @@ for file in "$dir"/*; do
     for ignore in "${ignores[@]}"; do
         if [ "$filename" = "$ignore" ]; then
             ignorable=true
-            break
         fi
     done
-    if [ "$ignorable" = true ]; then
+    if [ "$ignorable" == true ]; then
         echo "ignoring $filename"
         continue
     fi
@@ -28,7 +28,8 @@ for file in "$dir"/*; do
         continue
     fi
 
-    #ln -s "$file" "$HOME/filename"
+    ln -s "$file" "$HOME/$filename"
 done
 
 echo "Done"
+
