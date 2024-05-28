@@ -7,7 +7,7 @@ if [ ! -d "$dir" ]; then
     git clone https://github.com/rmassaroni/bulkOS-Ubuntu.git "$dir"
 fi
 
-ignores=("install.sh" ".gitignore" ".gitmodules")
+ignores=("install.sh" ".gitignore" ".gitmodules" "README.md")
 shopt -s dotglob
 
 for file in "$dir"/*; do
