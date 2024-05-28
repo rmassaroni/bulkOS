@@ -29,6 +29,7 @@ for file in "$dir"/*; do
     fi
 
     ln -s "$file" "$HOME/$filename"
+    echo "Created symbolic link to $filename"
 done
 
 echo "Done"
