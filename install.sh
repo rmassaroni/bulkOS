@@ -2,6 +2,11 @@
 
 dir="$HOME/dotfiles"
 
+if [ ! -d "$dir" ]; then
+    echo "~/dotfiles not found. Cloning repository..."
+    git clone https://github.com/rmassaroni/bulkOS-Ubuntu.git "$dir"
+fi
+
 ignores=("install.sh" ".gitignore" ".gitmodules")
 shopt -s dotglob
 
