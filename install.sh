@@ -1,5 +1,7 @@
 #!/bin/bash
 
+
+
 dir="$HOME/dotfiles"
 
 if [ ! -d "$dir" ]; then
@@ -36,6 +38,19 @@ for file in "$dir"/*; do
     ln -s "$file" "$HOME/$filename"
     echo "Created symbolic link to $filename"
 done
+
+
+if ! command -v zsh &> /dev/null
+then
+    echo "Zsh is not installed. Installing Zsh..."
+    sudo apt-get install -y zsh
+fi
+
+if [ "$SHELL" != "$(command -v zsh)" ]
+then
+    echo "Setting Zsh as the default shell..."
+    chsh -s "$(command -v zsh)"
+fi
 
 echo "Done"
 
