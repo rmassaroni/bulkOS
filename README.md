@@ -11,7 +11,7 @@ bash <(curl https://raw.githubusercontent.com/rmassaroni/bulkOS-Ubuntu/main/inst
 # Install Everything:
 Requires zsh
 
-Includes dotfiles, Zap plugins, Homebrew, and [my Neovim](https://github.com/rmassaroni/rjvim)
+Includes dotfiles, Zap plugins, Homebrew, and [my Neovim config](https://github.com/rmassaroni/rjvim).
 ```bash
 bash <(curl https://raw.githubusercontent.com/rmassaroni/bulkOS-Ubuntu/main/install.sh); 
 bash <(curl https://raw.githubusercontent.com/rmassaroni/rjvim/main/install.sh); 
