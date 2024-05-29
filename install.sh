@@ -6,7 +6,7 @@ dir="$HOME/dotfiles"
 
 if [ ! -d "$dir" ]; then
     echo "~/dotfiles not found. Cloning repository..."
-    git clone https://github.com/rmassaroni/bulkOS-Ubuntu.git "$dir"
+    git clone https://github.com/rmassaroni/bulkOS.git "$dir"
 fi
 
 ignores=("install.sh" ".gitignore" ".gitmodules" "README.md" "zap.zsh")
