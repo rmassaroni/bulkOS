@@ -1,7 +1,7 @@
 Run the following in a zsh shell for dotfiles and zap-zsh. 
 
 ```bash
-bash <(curl https://raw.githubusercontent.com/rmassaroni/bulkOS-Ubuntu/main/install.sh);
+bash <(curl https://raw.githubusercontent.com/rmassaroni/bulkOS/main/install.sh);
 source $HOME/.zshrc
 ```
 
@@ -14,9 +14,7 @@ Requires zsh
 
 Includes dotfiles, Zap plugins, Homebrew, and [my Neovim config](https://github.com/rmassaroni/rjvim).
 ```bash
-bash <(curl https://raw.githubusercontent.com/rmassaroni/bulkOS-Ubuntu/main/install.sh); 
+bash <(curl https://raw.githubusercontent.com/rmassaroni/bulkOS/main/install.sh); 
 bash <(curl https://raw.githubusercontent.com/rmassaroni/rjvim/main/install.sh); 
 source $HOME/.zshrc
 ```
-
-Will rename to bulkOS
