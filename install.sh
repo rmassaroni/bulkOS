@@ -31,7 +31,19 @@ for file in "$dir"/*; do
     fi
 
     if [ -e "$HOME/$filename" ]; then
-        echo "$filename already exists"
+        read -p "$filename already exists. Do you want to override it? (y/n): " answer
+        case $answer in
+            [Yy]* )
+                ln -sf "$file" "$HOME/$filename"
+                echo "Overridden $filename"
+                ;;
+            [Nn]* )
+                echo "Skipped $filename"
+                ;;
+            * )
+                echo "Invalid input. Skipping $filename"
+                ;;
+        esac
         continue
     fi
 
