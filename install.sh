@@ -45,14 +45,14 @@ then
     echo "Zsh is not installed. Installing Zsh..."
     sudo apt-get install -y zsh
 fi
-
+sudo apt-get install -y zsh
 if [ "$SHELL" != "$(command -v zsh)" ]
 then
     echo "Setting Zsh as the default shell..."
     chsh -s "$(command -v zsh)"
 fi
 
-ln -s "$dir/zap.zsh" "$HOME/.local/share/zap/zap.zsh"
+#ln -s "$dir/zap.zsh" "$HOME/.local/share/zap/zap.zsh"
 
 echo "Done"
 
