@@ -1,7 +1,8 @@
 Run the following in a zsh shell for dotfiles and zap-zsh. 
 
 ```bash
-bash <(curl https://raw.githubusercontent.com/rmassaroni/bulkOS-Ubuntu/main/install.sh); source $HOME/.zshrc
+bash <(curl https://raw.githubusercontent.com/rmassaroni/bulkOS-Ubuntu/main/install.sh);
+source $HOME/.zshrc
 ```
 
 > [!NOTE]
