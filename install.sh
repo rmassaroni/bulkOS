@@ -9,7 +9,7 @@ if [ ! -d "$dir" ]; then
     git clone https://github.com/rmassaroni/bulkOS-Ubuntu.git "$dir"
 fi
 
-ignores=("install.sh" ".gitignore" ".gitmodules" "README.md")
+ignores=("install.sh" ".gitignore" ".gitmodules" "README.md" "zap.zsh")
 shopt -s dotglob
 
 for file in "$dir"/*; do
@@ -51,6 +51,8 @@ then
     echo "Setting Zsh as the default shell..."
     chsh -s "$(command -v zsh)"
 fi
+
+ln -s "$dir/zap.zsh" "$HOME/.local/share/zap/zap.zsh"
 
 echo "Done"
 
