@@ -31,19 +31,22 @@ for file in "$dir"/*; do
     fi
 
     if [ -e "$HOME/$filename" ]; then
-        read -p "$filename already exists. Do you want to override it? (y/n): " answer
-        case $answer in
-            [Yy]* )
-                ln -sf "$file" "$HOME/$filename"
-                echo "Overridden $filename"
-                ;;
-            [Nn]* )
-                echo "Skipped $filename"
-                ;;
-            * )
-                echo "Invalid input. Skipping $filename"
-                ;;
-        esac
+        # read -p "$filename already exists. Do you want to override it? (y/n): " answer
+        # case $answer in
+        #     [Yy]* )
+        #         ln -sf "$file" "$HOME/$filename"
+        #         echo "Overridden $filename"
+        #         ;;
+        #     [Nn]* )
+        #         echo "Skipped $filename"
+        #         ;;
+        #     * )
+        #         echo "Invalid input. Skipping $filename"
+        #         ;;
+        # esac
+        echo "Overriding existing $filename..."
+        ln -sf "$file" "$HOME/$filename"
+        echo "Created symbolic link to $filename"
         continue
     fi
 
