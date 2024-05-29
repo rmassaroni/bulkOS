@@ -72,5 +72,6 @@ fi
 
 #ln -s "$dir/zap.zsh" "$HOME/.local/share/zap/zap.zsh"
 
+source ~/.zshrc
 echo "Done"
 
