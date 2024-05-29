@@ -1,6 +1,6 @@
 #!/bin/bash
 
-
+zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1
 
 dir="$HOME/dotfiles"
 
@@ -38,6 +38,7 @@ for file in "$dir"/*; do
     ln -s "$file" "$HOME/$filename"
     echo "Created symbolic link to $filename"
 done
+
 
 
 if ! command -v zsh &> /dev/null
