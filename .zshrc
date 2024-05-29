@@ -13,11 +13,11 @@ source ~/.aliases
 
 function newuser() {
     username="test"
-    password="password"
+    password="password2023"
     if id "$username" &>/dev/null; then
         # echo "User $username already exists. Skipping user creation."
         # exit 1
-        sudo deluser test
+        sudo deluser --remove-home test
     fi
     # sudo useradd -m -s /bin/bash "$username"
     sudo adduser --disabled-password --gecos "" "$username"
