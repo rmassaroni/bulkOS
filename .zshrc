@@ -11,6 +11,9 @@ fi
 
 source ~/.aliases
 source ~/.scripts.sh
+if [ -d "$HOME/.gpush" ]; then
+    source ~/.gpush/gpush.sh
+fi
 
 source ~/.local/share/zap/zap.zsh
 #source ~/projects/gpush/gpush.sh
@@ -61,3 +64,5 @@ compinit
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+export PATH="$HOME/.gpush:$PATH"
+export PATH="$HOME/.gpush:$PATH"
