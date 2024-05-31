@@ -1,4 +1,5 @@
 # ls() { command ls -F --group-directories-first "$@" }
+alias lsa='ls -a'
 alias l='ls -1'
 alias la='ls -1a'
 alias ga='git add'
@@ -7,3 +8,4 @@ alias gs='git status'
 alias gp='gpush'
 alias p='cd ~/projects'
 alias c='cd && ls -a'
+alias n='nvim'
