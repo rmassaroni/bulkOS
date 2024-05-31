@@ -24,3 +24,18 @@ function newuser() {
 # interact
 # EOF
 }
+
+
+# source all
+function sa() {
+    local dir="$1"
+    if [ -d "$dir" ]; then
+        for file in "$dir"/*; do
+            if [ -f "$file" ]; then
+                source "$file"
+            fi
+        done
+    else
+        echo "Directory does not exist: $dir"
+    fi
+}
