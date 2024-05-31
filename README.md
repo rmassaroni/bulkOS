@@ -1,4 +1,4 @@
-Run the following in a zsh shell for dotfiles and zap-zsh. 
+Run the following in a zsh shell for dotfiles, zap-zsh, and [gpush](https://github.com/rmassaroni/gpush). 
 
 ```bash
 bash <(curl https://raw.githubusercontent.com/rmassaroni/bulkOS/main/install.sh);
