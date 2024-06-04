@@ -65,3 +65,6 @@ compinit
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 export PATH="$HOME/.gpush:$PATH"
+
+export JAVA_HOME=/opt/jdk-17.0.11+9
+export PATH=$JAVA_HOME/bin:$PATH
