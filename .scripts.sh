@@ -39,3 +39,21 @@ function sa() {
         echo "Directory does not exist: $dir"
     fi
 }
+
+
+count_uncommitted() {
+    local projects_dir="$HOME/projects"
+    local count=0
+
+    for project_dir in "$projects_dir"/*; do
+        if [ -d "$project_dir" ]; then
+            if [ -d "$project_dir/.git" ]; then
+                if ! git -C "$project_dir" diff --quiet --exit-code; then
+                    ((count++))
+                fi
+            fi
+        fi
+    done
+
+    echo "Number of projects with uncommitted changes: $count"
+}
