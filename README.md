@@ -20,3 +20,7 @@ source $HOME/.zshrc
 ```
 
 Might just include rjvim curl inside install.sh
+
+
+
+automate git auth
