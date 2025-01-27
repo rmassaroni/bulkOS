@@ -34,6 +34,9 @@ automate git auth
 
 -- look into alacraty, tmux
 
+-- auth setup
+-- git config --global credential.helper store
+
 
 -- symlink for settings.json. path will be different
 C:\Users\rjm>mklink "C:\Users\rjm\AppData\Local\Packages\Microsoft.WindowsTerminalCanary_8wekyb3d8bbwe\LocalState\settings.json" "\\wsl$\Ubuntu\home\rjm\bulkOS\settings.json"
