@@ -29,6 +29,9 @@ automate git auth
 -- dir should be dotfiles
 
 
+-- still need to check surface book's settings/json
+
+
 -- symlink for settings.json. path will be different
 C:\Users\rjm>mklink "C:\Users\rjm\AppData\Local\Packages\Microsoft.WindowsTerminalCanary_8wekyb3d8bbwe\LocalState\settings.json" "\\wsl$\Ubuntu\home\rjm\bulkOS\settings.json"
 Cannot create a file when that file already exists.
