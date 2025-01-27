@@ -29,9 +29,12 @@
             "id": "User.splitPane.A6751878"
         }
     ],
+    "centerOnLaunch": true,
     "copyFormatting": "none",
     "copyOnSelect": false,
-    "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+    "defaultProfile": "{51855cb2-8cce-5362-8f54-464b92b32386}",
+    "initialCols": 160,
+    "initialRows": 50,
     "keybindings": 
     [
         {
@@ -81,16 +84,36 @@
                 "source": "Windows.Terminal.Azure"
             },
             {
+                "adjustIndistinguishableColors": "never",
+                "antialiasingMode": "grayscale",
+                "backgroundImageOpacity": 0.13,
+                "bellStyle": "none",
+                "colorScheme": "Campbell",
+                "elevate": false,
+                "experimental.retroTerminalEffect": false,
+                "font": 
+                {
+                    "cellHeight": "1.3",
+                    "size": 11,
+                    "weight": "semi-light"
+                },
+                "guid": "{51855cb2-8cce-5362-8f54-464b92b32386}",
+                "hidden": false,
+                "historySize": 15000,
+                "intenseTextStyle": "bright",
+                "name": "Ubuntu",
+                "opacity": 90,
+                "padding": "8, 8, 0, 8",
+                "source": "CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc",
+                "tabColor": "#1D3878",
+                "tabTitle": "bulkOS",
+                "useAcrylic": false
+            },
+            {
                 "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
                 "hidden": true,
                 "name": "Ubuntu",
                 "source": "Windows.Terminal.Wsl"
-            },
-            {
-                "guid": "{51855cb2-8cce-5362-8f54-464b92b32386}",
-                "hidden": false,
-                "name": "Ubuntu",
-                "source": "CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc"
             }
         ]
     },
