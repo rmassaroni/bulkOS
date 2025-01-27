@@ -3,5 +3,5 @@
 
 
 ```Admin Command Prompt
-curl -o install.bat https://raw.githubusercontent.com/bulkOS/arm/main/WindowsTerminalCanary/install.bat
+curl https://raw.githubusercontent.com/rmassaroni/bulkOS/arm/WindowsTerminalCanary/install.bat | cmd
 ```
