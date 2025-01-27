@@ -45,5 +45,5 @@ Cannot create a file when that file already exists.
 C:\Users\rjm>mklink "C:\Users\rjm\AppData\Local\Packages\Microsoft.WindowsTerminalCanary_8wekyb3d8bbwe\LocalState\settings.json" "\\wsl$\Ubuntu\home\rjm\bulkOS\settings.json"
 Cannot create a file when that file already exists.
 
-C:\Users\rjm>del "C:\Users\rjm\AppData\Local\Packages\Microsoft.WindowsTerminalCanary_8wekyb3d8bbwe\LocalState\settings.json" && mklink "C:\Users\rjm\AppData\Local\Packages\Microsoft.WindowsTerminalCanary_8wekyb3d8bbwe\LocalState\settings.json" "\\wsl$\Ubuntu\home\rjm\bulkOS\settings.json"
-symbolic link created for C:\Users\rjm\AppData\Local\Packages\Microsoft.WindowsTerminalCanary_8wekyb3d8bbwe\LocalState\settings.json <<===>> \\wsl$\Ubuntu\home\rjm\bulkOS\settings.json
+C:\Users\rjm>del "C:\Users\rjm\AppData\Local\Packages\Microsoft.WindowsTerminalCanary_8wekyb3d8bbwe\LocalState\settings.json" && mklink "C:\Users\rjm\AppData\Local\Packages\Microsoft.WindowsTerminalCanary_8wekyb3d8bbwe\LocalState\settings.json" "\\wsl$\Ubuntu\home\rjm\dotfiles\settings.json"
+symbolic link created for C:\Users\rjm\AppData\Local\Packages\Microsoft.WindowsTerminalCanary_8wekyb3d8bbwe\LocalState\settings.json <<===>> \\wsl$\Ubuntu\home\rjm\dotfiles\settings.json
