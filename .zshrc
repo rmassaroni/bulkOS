@@ -15,7 +15,7 @@ else
     echo "~/.aliases not found."
 fi
 
-if [ -d "$HOME/.scripts.sh" ]; then
+if [ -f "$HOME/.scripts.sh" ]; then
     source ~/.scripts.sh
 else
     echo "~/.scripts.sh not found."
