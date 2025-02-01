@@ -23,6 +23,7 @@ Might just include rjvim curl inside install.sh
 
 
 ## TODO:
+- make new install scripts!
 - automate git auth.  git config --global credential.helper store
 - install script needs to have separate steps if computer is ARM. homebrew will not work on arm
 - still need to check surface book's settings/json
