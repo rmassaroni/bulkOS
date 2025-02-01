@@ -37,3 +37,10 @@ automate git auth
 
 
 --include wsl setup
+
+
+
+-- zsh setup
+-- sudo apt install zsh
+-- zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1
+-- chsh -s $(which zsh)
