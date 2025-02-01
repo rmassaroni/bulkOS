@@ -50,3 +50,6 @@ automate git auth
 
 - will eventually need .gconfig from old bulkOS
 - bash <(curl https://raw.githubusercontent.com/rmassaroni/gpush/main/install.sh)
+
+
+- put an extenstion on .aliases for neatness
