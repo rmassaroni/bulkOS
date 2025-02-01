@@ -44,3 +44,5 @@ automate git auth
 -- sudo apt install zsh
 -- zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1
 -- chsh -s $(which zsh)
+
+-- if the .p10k.zsh does not already exist, it will force the config setup. add the file beforehand
