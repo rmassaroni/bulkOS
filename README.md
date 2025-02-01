@@ -46,3 +46,7 @@ automate git auth
 -- chsh -s $(which zsh)
 
 -- if the .p10k.zsh does not already exist, it will force the config setup. add the file beforehand
+
+
+- will eventually need .gconfig from old bulkOS
+- bash <(curl https://raw.githubusercontent.com/rmassaroni/gpush/main/install.sh)
