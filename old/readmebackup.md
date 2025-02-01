@@ -22,27 +22,38 @@ source $HOME/.zshrc
 Might just include rjvim curl inside install.sh
 
 
-## TODO:
-- automate git auth.  git config --global credential.helper store
-- install script needs to have separate steps if computer is ARM. homebrew will not work on arm
-- still need to check surface book's settings/json
-- look into alacraty, tmux
-- include wsl specific setup
+
+automate git auth
+
+
+
+-- still need to check surface book's settings/json
+
+
+-- look into alacraty, tmux
+
+-- auth setup
+-- git config --global credential.helper store
+
+
+--include wsl setup
+
+
+
+-- zsh setup
+-- sudo apt install zsh
+-- zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1
+-- chsh -s $(which zsh)
+
+-- if the .p10k.zsh does not already exist, it will force the config setup. add the file beforehand
+
+
 - will eventually need .gconfig from old bulkOS
 - bash <(curl https://raw.githubusercontent.com/rmassaroni/gpush/main/install.sh)
+
+
 - put an extenstion on .aliases for neatness
-- find the original .bashrc
-- .profile and other files from old/
 
 
-### zsh setup
-- sudo apt install zsh
-- zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1
-- chsh -s $(which zsh)
-- if the .p10k.zsh does not already exist, it will force the config setup. add the file beforehand
-
-
-
-
-
-
+- include old .bashrc
+- .profile?
