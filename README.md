@@ -34,6 +34,8 @@ Might just include rjvim curl inside install.sh
 - put an extenstion on .aliases for neatness
 - find the original .bashrc
 - .profile and other files from old/
+- apt isnt universal
+- linux distro specific scripts
 
 
 ### zsh setup
