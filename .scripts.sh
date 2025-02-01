@@ -13,7 +13,7 @@ function newuser() {
     sudo usermod -aG sudo $username
     echo "User $username created successfully."
     #sudo cp ~/.zshrc /home/"$username"/.zshrc
-    sudo touch /home/"$username"/.zshrc
+    # sudo touch /home/"$username"/.zshrc
     sudo chsh -s /bin/zsh test
     su - $username
     # su "$username" -c "echo 'Hello, I am $USER!'"
