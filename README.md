@@ -35,3 +35,5 @@ automate git auth
 -- auth setup
 -- git config --global credential.helper store
 
+
+--include wsl setup
