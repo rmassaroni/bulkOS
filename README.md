@@ -55,4 +55,5 @@ automate git auth
 - put an extenstion on .aliases for neatness
 
 
-include old .bashrc
+- include old .bashrc
+- .profile?
