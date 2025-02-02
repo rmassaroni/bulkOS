@@ -32,7 +32,7 @@ if [ -f "$HOME/.zshrc" ]; then
 fi
 
 echo "Linking .zshrc from dotfiles..."
-ln -s "$DOTFILES_DIR/.zshrc" "$HOME/.zshrc"
+ln -s "$dir/.zshrc" "$HOME/.zshrc"
 
 
 # Check if Zsh is installed
