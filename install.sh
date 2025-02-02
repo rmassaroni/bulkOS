@@ -19,15 +19,6 @@ else
 fi
 
 
-# Set Zsh as the default shell if it isn't already
-if [ "$SHELL" != "$(which zsh)" ]; then
-    echo "Setting Zsh as the default shell..."
-    chsh -s "$(which zsh)"
-else
-    echo "Zsh is already the default shell."
-fi
-
-
 # GPUSH
 bash <(curl https://raw.githubusercontent.com/rmassaroni/gpush/main/install.sh)
 
@@ -52,6 +43,14 @@ fi
 echo "Linking .zshrc from dotfiles..."
 ln -s "$DOTFILES_DIR/.zshrc" "$HOME/.zshrc"
 
+
+# Set Zsh as the default shell if it isn't already
+if [ "$SHELL" != "$(which zsh)" ]; then
+    echo "Setting Zsh as the default shell..."
+    chsh -s "$(which zsh)"
+else
+    echo "Zsh is already the default shell."
+fi
 
 echo "Installation complete."
 
