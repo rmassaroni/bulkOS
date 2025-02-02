@@ -26,6 +26,7 @@ if [ "$SHELL" != "$(which zsh)" ]; then
 else
     echo "Zsh is already the default shell."
 fi
+exec zsh
 
 
 # GPUSH
