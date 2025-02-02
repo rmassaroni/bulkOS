@@ -30,6 +30,7 @@ fi
 
 echo "Linking .zshrc from dotfiles..."
 ln -s "$dir/.zshrc" "$HOME/.zshrc"
+ln -s "$dir/.p10k.zsh" "$HOME/.p10k.zsh"
 
 
 # Check if Zsh is installed
