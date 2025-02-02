@@ -56,4 +56,5 @@ fi
 echo "Installation complete."
 
 
+source "$HOME/.zshrc"
 exec zsh
