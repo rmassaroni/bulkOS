@@ -26,7 +26,6 @@ if [ "$SHELL" != "$(which zsh)" ]; then
 else
     echo "Zsh is already the default shell."
 fi
-exec zsh
 
 
 # GPUSH
@@ -55,3 +54,6 @@ ln -s "$DOTFILES_DIR/.zshrc" "$HOME/.zshrc"
 
 
 echo "Installation complete."
+
+
+exec zsh
