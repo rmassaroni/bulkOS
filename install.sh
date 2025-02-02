@@ -56,4 +56,4 @@ fi
 echo "Installation complete."
 
 
-exec zsh --no-rcs
+exec zsh
