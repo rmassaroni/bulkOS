@@ -2,7 +2,7 @@
 
 cd $HOME #?
 
-export WINEPREFIX='$HOME/wineprefix/prefix' # can probably delete
+# export WINEPREFIX='$HOME/wineprefix/prefix' # can probably delete
 
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
@@ -16,8 +16,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${USER}.zsh" ]]; t
 fi
 
 
-source ~/.local/share/zap.zsh
-source ~/.local/share/zap/zap.zsh
+# source ~/.local/share/zap.zsh
+# source ~/.local/share/zap/zap.zsh
 
 if [ -f "$HOME/.aliases" ]; then
     source ~/.aliases
@@ -63,8 +63,8 @@ plug "zsh-users/zsh-syntax-highlighting"
 plug "zap-zsh/completions"
 
 # Use modern completion system
-autoload -Uz compinit
-compinit
+# autoload -Uz compinit
+# compinit
 
 # zstyle ':completion:*' auto-description 'specify: %d'
 # zstyle ':completion:*' completer _expand _complete _correct _approximate
