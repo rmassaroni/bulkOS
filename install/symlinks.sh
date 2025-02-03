@@ -9,14 +9,15 @@ linkables=(".aliases" ".bash_logout" ".bashrc" ".gitconfig" ".p10k.zsh" ".script
 # linkable directory?
 
 for file in "$dir/*"; do
-filename=$(basename "$file")
+    filename=$(basename "$file")
 
+    # skip directories
     if [ -d "$file" ]; then
         continue
     fi
 
 
-    for linkable in "${linkables[@]]}"; do
+    for linkable in "${linkables[@]}"; do
         if [ "$filename" = "$linkable" ]; then
             echo "Creating symbolic link to $filename"
             ln -s "$file" "$HOME/$filename"

@@ -24,8 +24,8 @@ else
 fi
 
 
-echo "Linking .zshrc from dotfiles..."
-ln -s "$dir/.p10k.zsh" "$HOME/.p10k.zsh"
+# echo "Linking .zshrc from dotfiles..."
+# ln -s "$dir/.p10k.zsh" "$HOME/.p10k.zsh"
 
 # symlinks
 source "$install_dir/symlinks.sh"
