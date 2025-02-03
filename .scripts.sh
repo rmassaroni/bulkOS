@@ -7,8 +7,9 @@ function newuser() {
         sudo deluser --remove-home test
     fi
     # sudo useradd -m -s /bin/bash "$username"
-    sudo adduser --disabled-password --gecos "" "$username"
-    echo "$username:$password" | sudo chpasswd
+    # sudo adduser --disabled-password --gecos "" "$username"
+    sudo adduser "$username"
+    # echo "$username:$password" | sudo chpasswd
     # echo "pass" | sudo passwd --stdin "$username"
     sudo usermod -aG sudo $username
     echo "User $username created successfully."
