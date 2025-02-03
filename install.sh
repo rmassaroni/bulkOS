@@ -36,10 +36,10 @@ fi
 # source "$install_dir/zap.sh" # this will probably be sourced from zsh.sh
 
 if command -v zsh >/dev/null 2>&1; then
-    zsh <<'EOF'
-    source "$HOME/dotfiles/install/zsh.sh"
-    source "$HOME/dotfiles/install/zap.sh"
-    EOF
+    zsh <<EOF
+source "$HOME/dotfiles/install/zsh.sh"
+source "$HOME/dotfiles/install/zap.sh"
+EOF
 else
     echo "Zsh is not installed. Exiting."
     exit 1
