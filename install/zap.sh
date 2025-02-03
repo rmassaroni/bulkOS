@@ -13,3 +13,6 @@
 
 # Force delete the .zshrc created by zap
 ln -sf "$dir/.zshrc" "$HOME/.zshrc"
+
+
+echo "End of zap.sh"
