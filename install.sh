@@ -29,8 +29,8 @@ echo "Sourcing zsh.sh"
 source "$install_dir/zsh.sh"
 
 # zap
-echo "Sourcing zap.sh"
-source "$install_dir/zap.sh" # this will probably be sourced from zsh.sh
+# echo "Sourcing zap.sh"
+# source "$install_dir/zap.sh" # this will probably be sourced from zsh.sh
 
 # if command -v zsh >/dev/null 2>&1; then
 # #     zsh <<EOF
