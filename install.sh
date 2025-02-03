@@ -63,6 +63,8 @@ fi
 #     echo "Zap is already installed."
 # fi
 
+ln -s "$dir/.zshrc" "$HOME/.zshrc"
+
 
 echo "Installation complete."
 
