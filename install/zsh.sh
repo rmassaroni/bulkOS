@@ -1,6 +1,16 @@
 #!/bin/bash
 
 
+
+
+
+
+echo "Sourcing zap.sh"
+source "$install_dir/zap.sh" # this will probably be sourced from zsh.sh
+
+
+
+
 # Check if Zsh is installed
 if ! command -v zsh &> /dev/null
 then
