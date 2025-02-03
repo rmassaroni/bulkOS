@@ -5,8 +5,8 @@
 
 
 
-echo "Sourcing zap.sh"
-source "$install_dir/zap.sh" # this will probably be sourced from zsh.sh
+# echo "Sourcing zap.sh"
+# source "$install_dir/zap.sh" # this will probably be sourced from zsh.sh
 
 
 
@@ -31,7 +31,7 @@ else
     echo "Zsh is already the default shell."
 fi
 
-# # Remove .zshrc so that an uneeded backup is not created
-# if [ -f "$HOME/.zshrc" ]; then
-#     rm '$HOME/.zshrc'
-# fi
+# Remove .zshrc so that an uneeded backup is not created
+if [ -f "$HOME/.zshrc" ]; then
+    rm '$HOME/.zshrc'
+fi

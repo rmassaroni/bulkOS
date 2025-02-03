@@ -15,6 +15,10 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${USER}.zsh" ]]; t
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${USER}.zsh"
 fi
 
+if [ -z "$ZSH_VERSION" ]; then
+    echo "This script requires Zsh. Exiting."
+    return
+fi
 
 # source ~/.local/share/zap.zsh
 # source ~/.local/share/zap/zap.zsh
