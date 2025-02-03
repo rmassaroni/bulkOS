@@ -23,8 +23,10 @@ fi
 # echo "Linking .zshrc from dotfiles..."
 # ln -s "$dir/.p10k.zsh" "$HOME/.p10k.zsh"
 
+
 # symlinks
 source "$install_dir/symlinks.sh"
+
 
 # zsh
 source "$install_dir/zsh.sh"
@@ -41,6 +43,6 @@ bash <(curl https://raw.githubusercontent.com/rmassaroni/gpush/main/install.sh) 
 echo "Installation complete." # move after source/exec ?
 
 
-source "$HOME/.zshrc"
+source "$HOME/.zshrc" 2>/dev/null
 exec zsh
 # one of these probably aren't needed
