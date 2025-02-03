@@ -9,7 +9,7 @@ linkables=(".aliases" ".bash_logout" ".bashrc" ".gitconfig" ".p10k.zsh" ".script
 # linkable directory?
 
 echo "$dir"
-for file in "$dir/*"; do
+for file in "$dir"/*; do
     filename=$(basename "$file")
     echo "$filename"
 
