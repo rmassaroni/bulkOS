@@ -9,8 +9,6 @@ zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) 
 ln -sf "$dir/.zshrc" "$HOME/.zshrc"
 
 
-echo "End of zap.sh"
-
 
 
 
