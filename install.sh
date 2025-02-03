@@ -10,10 +10,6 @@ shopt -s dotglob #include hidden filenames in searches.
 # add these to zshrc or bashrc to make it universal
 
 
-# GPUSH
-bash <(curl https://raw.githubusercontent.com/rmassaroni/gpush/main/install.sh)
-
-
 # Clone dotfiles
 if [ -d "$dir" ]; then
     echo "Dotfiles repository already exists at $DOTFILES_DIR."
@@ -36,6 +32,10 @@ source "$install_dir/zsh.sh"
 
 # zap
 source "$install_dir/zap.sh" # this will probably be sourced from zsh.sh
+
+
+# GPUSH
+bash <(curl https://raw.githubusercontent.com/rmassaroni/gpush/main/install.sh)
 
 
 echo "Installation complete." # move after source/exec ?
