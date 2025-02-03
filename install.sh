@@ -24,16 +24,11 @@ else
 fi
 
 
-# Symlinks
-if [ -f "$HOME/.zshrc" ]; then
-    echo ".zshrc already exists. Backing up to .zshrc.backup"
-    mv "$HOME/.zshrc" "$HOME/.zshrc.backup"
-fi
-
 echo "Linking .zshrc from dotfiles..."
-# ln -s "$dir/.zshrc" "$HOME/.zshrc"
 ln -s "$dir/.p10k.zsh" "$HOME/.p10k.zsh"
 
+# symlinks
+source "$install_dir/symlinks.sh"
 
 # zsh
 source "$install_dir/zsh.sh"

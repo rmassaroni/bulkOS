@@ -22,4 +22,6 @@ else
 fi
 
 # Remove .zshrc so that an uneeded backup is not created
-rm '$HOME/.zshrc'
+if [ -f "$HOME/.zshrc" ]; then
+    rm '$HOME/.zshrc'
+fi
