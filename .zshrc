@@ -19,7 +19,11 @@ fi
 if [ -z "$ZSH_VERSION" ]; then
     echo "This script requires Zsh. You are likely seeing this because the install script is not done yet. Exiting."
     return
-fi # source ~/.local/share/zap.zsh source ~/.local/share/zap/zap.zsh if [ -f "$HOME/.aliases" ]; then source ~/.aliases else
+fi 
+# source ~/.local/share/zap.zsh source ~/.local/share/zap/zap.zsh 
+if [ -f "$HOME/.aliases" ]; then 
+    source ~/.aliases 
+else
     echo "~/.aliases not found."
 fi
 
