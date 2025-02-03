@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# in old script, this was done before starting zsh
+# should this be does before or after zap and zsh
 
 
 ignores=("install.sh" ".gitignore" ".gitmodules" "README.md" "zap.zsh")
