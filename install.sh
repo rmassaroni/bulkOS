@@ -58,7 +58,8 @@ fi
 # if ! grep -q "zap.zsh" "$HOME/.zshrc"; then
     # echo "Zap not found in .zshrc. Installing Zap..."
 #     # Install Zap using the provided installation script
-    zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1
+    # zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1
+    ZAP_NO_MODIFY_RC=true zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1
 # else
 #     echo "Zap is already installed."
 # fi
