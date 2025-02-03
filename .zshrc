@@ -17,7 +17,7 @@ fi
 
 # Quit sourcing during installation. Can be placed lower, right before all zap-specific things.
 if [ -z "$ZSH_VERSION" ]; then
-    echo "This script requires Zsh. Exiting."
+    echo "This script requires Zsh. You are likely seeing this because the install script is not done yet. Exiting."
     return
 fi
 
