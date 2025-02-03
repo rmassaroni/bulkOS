@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 cd $HOME #?
 
 export WINEPREFIX='$HOME/wineprefix/prefix' # can probably delete
