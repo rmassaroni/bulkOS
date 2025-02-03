@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 
 # Check if Zsh is installed
