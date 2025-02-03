@@ -1,5 +1,6 @@
-cd $HOME
-export WINEPREFIX='$HOME/wineprefix/prefix'
+cd $HOME #?
+
+export WINEPREFIX='$HOME/wineprefix/prefix' # can probably delete
 
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
@@ -78,20 +79,12 @@ compinit
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 export PATH="$HOME/.gpush:$PATH"
 
-export JAVA_HOME=/opt/jdk-17.0.11+9
+
+export JAVA_HOME=/opt/jdk-17.0.11+9 
 export PATH=$JAVA_HOME/bin:$PATH
+#old paths. need to be updated
 
 
-
-
-
-# # Created by Zap installer
-# [ -f "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh" ] && source "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh"
-# plug "zsh-users/zsh-autosuggestions"
-# plug "zap-zsh/supercharge"
-# plug "zap-zsh/zap-prompt"
-# plug "zsh-users/zsh-syntax-highlighting"
-#
 # # Load and initialise completion system
 # autoload -Uz compinit
 # compinit
