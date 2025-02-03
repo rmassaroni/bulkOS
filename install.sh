@@ -1,5 +1,8 @@
 #!/bin/bash
 
+dir="$HOME/dotfiles"
+install_dir="$dir/install"
+
 
 shopt -s dotglob #include hidden filenames in searches. 
 # this is bash specific and won't work in zsh. 
@@ -12,10 +15,9 @@ bash <(curl https://raw.githubusercontent.com/rmassaroni/gpush/main/install.sh)
 
 
 # Clone dotfiles
-dir="$HOME/dotfiles"
-
 if [ -d "$dir" ]; then
     echo "Dotfiles repository already exists at $DOTFILES_DIR."
+    # might need to end script early if this happens
 else
     echo "~/dotfiles not found. Cloning repository..."
     git clone https://github.com/rmassaroni/bulkOS.git "$dir"
@@ -34,27 +36,16 @@ ln -s "$dir/.p10k.zsh" "$HOME/.p10k.zsh"
 
 
 # zsh
-source "$HOME/dotfiles/install/zsh.sh"
-
-source "$HOME/dotfiles/install/zsh"
+source "$install_dir/zsh.sh"
 
 
-# Check if Zap is already installed
-# if ! grep -q "zap.zsh" "$HOME/.zshrc"; then
-    # echo "Zap not found in .zshrc. Installing Zap..."
-#     # Install Zap using the provided installation script
-    # zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1
-    ZAP_NO_MODIFY_RC=true zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1
-# else
-#     echo "Zap is already installed."
-# fi
-# find better way to see if zap already exists
-
-ln -sf "$dir/.zshrc" "$HOME/.zshrc"
+# zap
+source "$install_dir/zap.sh" # this will probably be sourced from zsh.sh
 
 
-echo "Installation complete."
+echo "Installation complete." # move after source/exec ?
 
 
 source "$HOME/.zshrc"
 exec zsh
+# one of these probably aren't needed
