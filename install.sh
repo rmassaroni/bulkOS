@@ -47,6 +47,6 @@ bash <(curl https://raw.githubusercontent.com/rmassaroni/gpush/main/install.sh) 
 echo "Installation complete." # move after source/exec ?
 
 
-# source "$HOME/.zshrc" 2>/dev/null
+source "$HOME/.zshrc" 2>/dev/null
 exec zsh
 # one of these probably aren't needed
