@@ -15,6 +15,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${USER}.zsh" ]]; t
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${USER}.zsh"
 fi
 
+# Quit sourcing during installation. Can be placed lower, right before all zap-specific things.
 if [ -z "$ZSH_VERSION" ]; then
     echo "This script requires Zsh. Exiting."
     return
