@@ -21,3 +21,5 @@ else
     echo "Zsh is already the default shell."
 fi
 
+# Remove .zshrc so that an uneeded backup is not created
+rm '$HOME/.zshrc'
