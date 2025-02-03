@@ -37,6 +37,7 @@ Might just include rjvim curl inside install.sh
 - apt isnt universal
 - linux distro specific scripts
 - files like .scripts.sh do not need to be in the home directory. .scripts.sh also probably doesn't need to be hidden
+- instead of printing all files not found on startup, print '3 files not found. enter some command for details'
 
 
 ### zsh setup
