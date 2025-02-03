@@ -35,7 +35,7 @@ source "$install_dir/zap.sh" # this will probably be sourced from zsh.sh
 
 
 # GPUSH
-bash <(curl https://raw.githubusercontent.com/rmassaroni/gpush/main/install.sh)
+bash <(curl https://raw.githubusercontent.com/rmassaroni/gpush/main/install.sh) # needs to be after zap installation and setup
 
 
 echo "Installation complete." # move after source/exec ?
