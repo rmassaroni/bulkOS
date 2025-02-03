@@ -5,19 +5,15 @@ shopt -s dotglob # include hidden files
 dir="$HOME/dotfiles"
 
 linkables=(".aliases" ".bash_logout" ".bashrc" ".gitconfig" ".p10k.zsh" ".scripts.sh" ".vimrc")
-# .zshrc might have to be done later
 # linkable directory?
 
-echo "$dir"
 for file in "$dir"/*; do
     filename=$(basename "$file")
-    echo "$filename"
 
     # skip directories
     if [ -d "$file" ]; then
         continue
     fi
-
 
     for linkable in "${linkables[@]}"; do
         if [ "$filename" = "$linkable" ]; then
@@ -25,8 +21,13 @@ for file in "$dir"/*; do
             ln -s "$file" "$HOME/$filename"
         fi
     done
+done
 
-    
+
+
+
+
+
 
     # will need to check for existing files
 
@@ -52,4 +53,3 @@ for file in "$dir"/*; do
     #
     # ln -s "$file" "$HOME/$filename"
     # echo "Created symbolic link to $filename"
-done
