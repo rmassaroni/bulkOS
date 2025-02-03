@@ -20,20 +20,14 @@ else
 fi
 
 
-# echo "Linking .zshrc from dotfiles..."
-# ln -s "$dir/.p10k.zsh" "$HOME/.p10k.zsh"
+# symlinks
+source "$install_dir/symlinks.sh"
 
+# zsh
+source "$install_dir/zsh.sh"
 
-# # symlinks
-# source "$install_dir/symlinks.sh"
-#
-#
-# # zsh
-# source "$install_dir/zsh.sh"
-#
-#
-# # zap
-# source "$install_dir/zap.sh" # this will probably be sourced from zsh.sh
+# zap
+source "$install_dir/zap.sh" # this will probably be sourced from zsh.sh
 
 # if command -v zsh >/dev/null 2>&1; then
 # #     zsh <<EOF
