@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 # Check if Zap is already installed
 # if ! grep -q "zap.zsh" "$HOME/.zshrc"; then
