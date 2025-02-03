@@ -10,6 +10,7 @@ linkables=(".aliases" ".bash_logout" ".bashrc" ".gitconfig" ".p10k.zsh" ".script
 
 for file in "$dir/*"; do
     filename=$(basename "$file")
+    echo "$filename"
 
     # skip directories
     if [ -d "$file" ]; then
