@@ -34,7 +34,9 @@ ln -s "$dir/.p10k.zsh" "$HOME/.p10k.zsh"
 
 
 # zsh
-source '$HOME/dotfiles/install/zsh.sh'
+source "$HOME/dotfiles/install/zsh.sh"
+
+source "$HOME/dotfiles/install/zsh"
 
 
 # Check if Zap is already installed
