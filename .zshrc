@@ -14,7 +14,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${USER}.zsh" ]]; t
 fi
 
 
-# source ~/.local/share/zap.zsh
+source ~/.local/share/zap.zsh
+source ~/.local/share/zap/zap.zsh
 
 if [ -f "$HOME/.aliases" ]; then
     source ~/.aliases
