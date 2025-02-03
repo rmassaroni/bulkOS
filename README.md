@@ -36,6 +36,7 @@ Might just include rjvim curl inside install.sh
 - .profile and other files from old/
 - apt isnt universal
 - linux distro specific scripts
+- files like .scripts.sh do not need to be in the home directory
 
 
 ### zsh setup
