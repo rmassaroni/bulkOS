@@ -1,13 +1,28 @@
-cd $HOME
-export WINEPREFIX='$HOME/wineprefix/prefix'
+#!/bin/zsh
+
+cd $HOME #?
+
+# export WINEPREFIX='$HOME/wineprefix/prefix' # can probably delete
 
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+# fi
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${USER}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${USER}.zsh"
 fi
+
+# Quit sourcing during installation. Can be placed lower, right before all zap-specific things.
+if [ -z "$ZSH_VERSION" ]; then
+    echo "This script requires Zsh. You are likely seeing this because the install script is not done yet. Exiting."
+    return
+fi
+
+# source ~/.local/share/zap.zsh
+# source ~/.local/share/zap/zap.zsh
 
 if [ -f "$HOME/.aliases" ]; then
     source ~/.aliases
@@ -53,8 +68,8 @@ plug "zsh-users/zsh-syntax-highlighting"
 plug "zap-zsh/completions"
 
 # Use modern completion system
-autoload -Uz compinit
-compinit
+# autoload -Uz compinit
+# compinit
 
 # zstyle ':completion:*' auto-description 'specify: %d'
 # zstyle ':completion:*' completer _expand _complete _correct _approximate
@@ -78,20 +93,12 @@ compinit
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 export PATH="$HOME/.gpush:$PATH"
 
-export JAVA_HOME=/opt/jdk-17.0.11+9
+
+export JAVA_HOME=/opt/jdk-17.0.11+9 
 export PATH=$JAVA_HOME/bin:$PATH
+#old paths. need to be updated
 
 
-
-
-
-# # Created by Zap installer
-# [ -f "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh" ] && source "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh"
-# plug "zsh-users/zsh-autosuggestions"
-# plug "zap-zsh/supercharge"
-# plug "zap-zsh/zap-prompt"
-# plug "zsh-users/zsh-syntax-highlighting"
-#
 # # Load and initialise completion system
 # autoload -Uz compinit
 # compinit

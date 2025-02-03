@@ -36,6 +36,10 @@ Might just include rjvim curl inside install.sh
 - .profile and other files from old/
 - apt isnt universal
 - linux distro specific scripts
+- files like .scripts.sh do not need to be in the home directory. .scripts.sh also probably doesn't need to be hidden
+- instead of printing all files not found on startup, print '3 files not found. enter some command for details'
+- script dir?
+- install homebrew on non-arm systems: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 
 ### zsh setup

@@ -58,3 +58,22 @@ count_uncommitted() {
 
     echo "Number of projects with uncommitted changes: $count"
 }
+
+function ssh-nova() {
+    CRED_FILE="$HOME/.private/.vu_unix_server.conf"
+
+    if [ ! -f "$CRED_FILE" ]; then
+        echo "Credentials file not found at $CRED_FILE"
+        exit 1
+    fi
+
+    USR=$(grep "username" "$CRED_FILE" | cut -d "'" -f2)
+    PASSWORD=$(grep "password" "$CRED_FILE" | cut -d "'" -f2)
+
+    if ! command -v sshpass &> /dev/null; then
+        echo "sshpass is required but not installed. Installing it now."
+        sudo apt-get update && sudo apt-get install -y sshpass #temp
+    fi
+
+    sshpass -p "$PASSWORD" ssh "$USR"@csgate.csc.villanova.edu
+}

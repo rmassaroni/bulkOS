@@ -1,5 +1,8 @@
 #!/bin/bash
 
+dir="$HOME/dotfiles"
+install_dir="$dir/install"
+
 
 shopt -s dotglob #include hidden filenames in searches. 
 # this is bash specific and won't work in zsh. 
@@ -7,50 +10,38 @@ shopt -s dotglob #include hidden filenames in searches.
 # add these to zshrc or bashrc to make it universal
 
 
-# Check if Zsh is installed
-if ! command -v zsh &> /dev/null
-then
-    echo "Zsh is not installed. Installing Zsh..."
-    # will eventually not be able to assume that apt is a given
-    sudo apt update
-    sudo apt install -y zsh
-else
-    echo "Zsh is already installed."
-fi
-
-
-# Set Zsh as the default shell if it isn't already
-if [ "$SHELL" != "$(which zsh)" ]; then
-    echo "Setting Zsh as the default shell..."
-    chsh -s "$(which zsh)"
-else
-    echo "Zsh is already the default shell."
-fi
-
-
-# GPUSH
-bash <(curl https://raw.githubusercontent.com/rmassaroni/gpush/main/install.sh)
-
-
 # Clone dotfiles
-dir="$HOME/dotfiles"
-
 if [ -d "$dir" ]; then
     echo "Dotfiles repository already exists at $DOTFILES_DIR."
+    # might need to end script early if this happens
 else
     echo "~/dotfiles not found. Cloning repository..."
     git clone https://github.com/rmassaroni/bulkOS.git "$dir"
 fi
 
 
-# Symlinks
-if [ -f "$HOME/.zshrc" ]; then
-    echo ".zshrc already exists. Backing up to .zshrc.backup"
-    mv "$HOME/.zshrc" "$HOME/.zshrc.backup"
-fi
-
-echo "Linking .zshrc from dotfiles..."
-ln -s "$DOTFILES_DIR/.zshrc" "$HOME/.zshrc"
+# symlinks
+source "Sourcing symlinks.sh"
+source "$install_dir/symlinks.sh"
 
 
-echo "Installation complete."
+# zsh
+echo "Sourcing zsh.sh"
+source "$install_dir/zsh.sh"
+
+
+# zap
+echo "Sourcing zap.sh"
+source "$install_dir/zap.sh" # this will probably be sourced from zsh.sh
+
+
+# GPUSH
+bash <(curl https://raw.githubusercontent.com/rmassaroni/gpush/main/install.sh) # needs to be after zap installation and setup
+
+
+echo "Installation complete." # move after source/exec ?
+
+
+# source "$HOME/.zshrc" 2>/dev/null
+exec zsh
+# one of these probably aren't needed
