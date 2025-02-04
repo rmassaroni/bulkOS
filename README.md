@@ -41,6 +41,7 @@ Might just include rjvim curl inside install.sh
 - script dir?
 - install homebrew on non-arm systems: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 - specify requirements
+- dotfiles status script that prints symlink status and prints relavent information such as OS and architecture
 
 
 ### zsh setup
