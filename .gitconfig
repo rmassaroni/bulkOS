@@ -2,7 +2,7 @@
 	defaultBranch = main
 [user]
 	email = robjmass@gmail.com
-	name = rjm
+	name = rmassaroni
 [credential]
 	helper = store
 [filter "lfs"]
@@ -12,3 +12,5 @@
 	process = git-lfs filter-process
 [http]
 	postBuffer = 524288000
+[safe]
+	directory = /mnt/d
