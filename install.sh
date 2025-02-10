@@ -2,6 +2,7 @@
 
 dir="$HOME/dotfiles"
 install_dir="$dir/install"
+backup_dir="$HOME/dotfiles-backup"
 
 
 shopt -s dotglob #include hidden filenames in searches. 
@@ -12,12 +13,19 @@ shopt -s dotglob #include hidden filenames in searches.
 
 # Clone dotfiles
 if [ -d "$dir" ]; then
-    echo "Dotfiles repository already exists at $DOTFILES_DIR."
-    # might need to end script early if this happens
+    echo "Dotfiles repository already exists at $dir."
+    if [ -d "$backup_dir" ]; then
+        echo "Removing existing backup directory: $backup_dir"
+        rm -rf "$backup_dir" # Remove the old backup
+    fi
+    echo "Backing up the existing dotfiles to $backup_dir..."
+    mv "$dir" "$backup_dir"
 else
-    echo "~/dotfiles not found. Cloning repository..."
-    git clone https://github.com/rmassaroni/bulkOS.git "$dir"
+    echo "~/dotfiles not found."
 fi
+
+echo "Cloning a fresh copy of the dotfiles repository..."
+git clone https://github.com/rmassaroni/bulkOS.git "$dir"
 
 
 # symlinks
