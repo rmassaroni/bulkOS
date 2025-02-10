@@ -60,9 +60,43 @@ HISTFILE=~/.zsh_history
 plug "romkatv/powerlevel10k"
 plug "zsh-users/zsh-autosuggestions"
 plug "zap-zsh/supercharge"
-plug "zap-zsh/zap-prompt"
 plug "zsh-users/zsh-syntax-highlighting"
 plug "zap-zsh/completions"
+# plug "zap-zsh/zap-prompt" #must be commented out when entering external drive
+
+# check if the current directory is on an external drive
+is_external_drive() {
+    local external_drives=("/media" "/mnt")
+    local current_dir=$(pwd)
+
+    for drive in $external_drives; do
+        if [[ $current_dir == $drive* ]]; then
+            return 0  # Directory is on an external drive
+        fi
+    done
+
+    return 1  # Directory is not on an external drive
+}
+
+# Function to load zap-prompt only if we're not on an external drive
+load_zap_prompt() {
+    if ! is_external_drive && ! $(alias | grep -q 'zap-prompt'); then
+        plug "zap-zsh/zap-prompt"
+    fi
+}
+
+# Check directory change dynamically
+autoload -U add-zsh-hook
+add-zsh-hook chpwd load_zap_prompt
+
+# Run initial check when starting
+load_zap_prompt
+
+
+
+
+
+
 
 # Use modern completion system
 # autoload -Uz compinit
