@@ -43,6 +43,7 @@ Might just include rjvim curl inside install.sh
 - specify requirements
 - dotfiles status script that prints symlink status and prints relavent information such as OS and architecture
 - verify safe updating
+- add a zsh prompt attribute that shows if in external drive
 
 
 ### zsh setup
