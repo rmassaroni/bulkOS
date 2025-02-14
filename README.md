@@ -45,6 +45,7 @@ Might just include rjvim curl inside install.sh
 - verify safe updating
 - add a zsh prompt attribute that shows if in external drive
 - put a comment on top of each file that shows their actual location
+- stow
 
 
 ### zsh setup
