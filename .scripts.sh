@@ -77,3 +77,9 @@ function ssh-nova() {
 
     sshpass -p "$PASSWORD" ssh "$USR"@csgate.csc.villanova.edu
 }
+
+
+function print-status() {
+    #so far, just storage
+    sudo du -hx / --max-depth=1 | sort -hr | head -20
+}
