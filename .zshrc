@@ -74,9 +74,7 @@ load_zap_prompt() {
 # Check directory change dynamically
 autoload -U add-zsh-hook
 add-zsh-hook chpwd load_zap_prompt
-
-# Run initial check when starting
-load_zap_prompt
+load_zap_prompt # Run initial check when starting
 
 # Load Powerlevel10k prompt configuration. To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
@@ -104,7 +102,7 @@ load_zap_prompt
 # zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 # zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
-#old paths. need to be updated
+# Old paths. Need to be updated
 export PATH="$HOME/.gpush:$PATH"
 export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH" #old
 export JAVA_HOME=/opt/jdk-17.0.11+9 
