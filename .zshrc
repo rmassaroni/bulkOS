@@ -30,21 +30,24 @@ fi
 
 
 # source dotfiles if found. will make reusable function
-if [ -f "$HOME/.aliases" ]; then 
-    source ~/.aliases 
-else
-    echo "~/.aliases not found."
-fi
-if [ -f "$HOME/.scripts.sh" ]; then
-    source ~/.scripts.sh
-else
-    echo "~/.scripts.sh not found."
-fi
-if [ -d "$HOME/.gpush" ]; then
-    source ~/.gpush/gpush.sh
-else
-    echo "~/.gpush not found."
-fi
+# if [ -f "$HOME/.aliases" ]; then 
+#     source ~/.aliases 
+# else
+#     echo "~/.aliases not found."
+# fi
+# if [ -f "$HOME/.scripts.sh" ]; then
+#     source ~/.scripts.sh
+# else
+#     echo "~/.scripts.sh not found."
+# fi
+# if [ -d "$HOME/.gpush" ]; then
+#     source ~/.gpush/gpush.sh
+# else
+#     echo "~/.gpush not found."
+# fi
+for file in "$HOME/.aliases" "$HOME/.scripts.sh" "$HOME/.gpush/gpush.sh"; do
+    [[ -f $file ]] && source $file || echo "$file not found."
+done
 
 source ~/.local/share/zap/zap.zsh
 
