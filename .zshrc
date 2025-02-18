@@ -1,6 +1,11 @@
 #!/bin/zsh
 
+
 cd $HOME #?
+
+
+# daily welcome message
+
 
 # export WINEPREFIX='$HOME/wineprefix/prefix' # can probably delete
 
@@ -15,24 +20,26 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${USER}.zsh" ]]; t
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${USER}.zsh"
 fi
 
+
+
 # Quit sourcing during installation. Can be placed lower, right before all zap-specific things.
 if [ -z "$ZSH_VERSION" ]; then
     echo "This script requires Zsh. You are likely seeing this because the install script is not done yet. Exiting."
     return
 fi 
-# source ~/.local/share/zap.zsh source ~/.local/share/zap/zap.zsh 
+
+
+# source dotfiles if found. will make reusable function
 if [ -f "$HOME/.aliases" ]; then 
     source ~/.aliases 
 else
     echo "~/.aliases not found."
 fi
-
 if [ -f "$HOME/.scripts.sh" ]; then
     source ~/.scripts.sh
 else
     echo "~/.scripts.sh not found."
 fi
-
 if [ -d "$HOME/.gpush" ]; then
     source ~/.gpush/gpush.sh
 else
@@ -40,7 +47,6 @@ else
 fi
 
 source ~/.local/share/zap/zap.zsh
-#source ~/projects/gpush/gpush.sh
 
 autoload -Uz promptinit
 promptinit
@@ -49,7 +55,7 @@ prompt adam1
 setopt histignorealldups sharehistory
 
 # Use emacs keybindings even if our EDITOR is set to vi
-bindkey -e
+bindkey -e #?
 
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=1000
@@ -64,18 +70,17 @@ plug "zsh-users/zsh-syntax-highlighting"
 plug "zap-zsh/completions"
 # plug "zap-zsh/zap-prompt" #must be commented out when entering external drive
 
+
 # check if the current directory is on an external drive
 is_external_drive() {
     local external_drives=("/media" "/mnt")
     local current_dir=$(pwd)
-
     for drive in $external_drives; do
         if [[ $current_dir == $drive* ]]; then
             return 0  # Directory is on an external drive
         fi
     done
-
-    return 1  # Directory is not on an external drive
+    return 1
 }
 
 # Function to load zap-prompt only if we're not on an external drive
@@ -97,7 +102,7 @@ load_zap_prompt
 
 
 
-
+# ?
 # Use modern completion system
 # autoload -Uz compinit
 # compinit
@@ -124,7 +129,7 @@ load_zap_prompt
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 export PATH="$HOME/.gpush:$PATH"
 
-export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
+export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH" #old
 
 
 export JAVA_HOME=/opt/jdk-17.0.11+9 
