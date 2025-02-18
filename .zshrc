@@ -1,14 +1,14 @@
 #!/bin/zsh
 
+# Quit sourcing during installation.
+if [ -z "$ZSH_VERSION" ]; then
+    echo "This script requires Zsh. You are likely seeing this because the install script is not done yet. Exiting."
+    return
+fi 
 
 cd $HOME #?
 
-
 # daily welcome message
-
-
-# export WINEPREFIX='$HOME/wineprefix/prefix' # can probably delete
-
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -20,61 +20,39 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${USER}.zsh" ]]; t
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${USER}.zsh"
 fi
 
-
-
-# Quit sourcing during installation. Can be placed lower, right before all zap-specific things.
-if [ -z "$ZSH_VERSION" ]; then
-    echo "This script requires Zsh. You are likely seeing this because the install script is not done yet. Exiting."
-    return
-fi 
-
-
-# source dotfiles if found. will make reusable function
-# if [ -f "$HOME/.aliases" ]; then 
-#     source ~/.aliases 
-# else
-#     echo "~/.aliases not found."
-# fi
-# if [ -f "$HOME/.scripts.sh" ]; then
-#     source ~/.scripts.sh
-# else
-#     echo "~/.scripts.sh not found."
-# fi
-# if [ -d "$HOME/.gpush" ]; then
-#     source ~/.gpush/gpush.sh
-# else
-#     echo "~/.gpush not found."
-# fi
+# Source dotfiles if found. Will make array.
 for file in "$HOME/.aliases" "$HOME/.scripts.sh" "$HOME/.gpush/gpush.sh"; do
     [[ -f $file ]] && source $file || echo "$file not found."
 done
 
+# Initialize zap
 source ~/.local/share/zap/zap.zsh
 
+# Prompt configuration
 autoload -Uz promptinit
 promptinit
 prompt adam1
 
-setopt histignorealldups sharehistory
-
 # Use emacs keybindings even if our EDITOR is set to vi
 bindkey -e #?
+# bindkey -v
 
-# Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
+# History settings
+setopt histignorealldups sharehistory
 HISTSIZE=1000
 SAVEHIST=1000
 HISTFILE=~/.zsh_history
 
-[ -f "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh" ] && source "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh"
+# Load zap plugins
+[ -f "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh" ] && source "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh" #?
 plug "romkatv/powerlevel10k"
 plug "zsh-users/zsh-autosuggestions"
 plug "zap-zsh/supercharge"
 plug "zsh-users/zsh-syntax-highlighting"
 plug "zap-zsh/completions"
-# plug "zap-zsh/zap-prompt" #must be commented out when entering external drive
+# plug "zap-zsh/zap-prompt" # can't use in external drives
 
-
-# check if the current directory is on an external drive
+# Check if the current directory is on an external drive
 is_external_drive() {
     local external_drives=("/media" "/mnt")
     local current_dir=$(pwd)
@@ -100,16 +78,15 @@ add-zsh-hook chpwd load_zap_prompt
 # Run initial check when starting
 load_zap_prompt
 
+# Load Powerlevel10k prompt configuration. To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
 
-
-
-
-
-# ?
+# Completion initialization
 # Use modern completion system
 # autoload -Uz compinit
 # compinit
 
+# Completion styling
 # zstyle ':completion:*' auto-description 'specify: %d'
 # zstyle ':completion:*' completer _expand _complete _correct _approximate
 # zstyle ':completion:*' format 'Completing %d'
@@ -124,26 +101,17 @@ load_zap_prompt
 # zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
 # zstyle ':completion:*' use-compctl false
 # zstyle ':completion:*' verbose true
-#
 # zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 # zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+#old paths. need to be updated
 export PATH="$HOME/.gpush:$PATH"
-
 export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH" #old
-
-
 export JAVA_HOME=/opt/jdk-17.0.11+9 
 export PATH=$JAVA_HOME/bin:$PATH
-#old paths. need to be updated
+# export WINEPREFIX='$HOME/wineprefix/prefix' # can probably delete
 
-
-# # Load and initialise completion system
-# autoload -Uz compinit
-# compinit
-
+# NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
