@@ -52,6 +52,7 @@ Might just include rjvim curl inside install.sh
 - fix wtcanary opening 2 windows on launch
 - autohotkey shortcuts
 - only put files in home directory if they need to be there. .aliases
+- windows fs shotcut alias needs to be wsl specific
 
 
 
