@@ -49,6 +49,8 @@ Might just include rjvim curl inside install.sh
 - git clone https://git.savannah.gnu.org/git/stow.git
 - cd stow
 - sudo make install
+- fix wtcanary opening 2 windows on launch
+- autohotkey shortcuts
 
 
 
