@@ -53,6 +53,8 @@ Might just include rjvim curl inside install.sh
 - autohotkey shortcuts
 - only put files in home directory if they need to be there. .aliases
 - windows fs shotcut alias needs to be wsl specific
+- New-Item -ItemType SymbolicLink -Path "C:\Users\rjm\AutoHotkey" -Target "\\wsl$\Ubuntu\home\rjm\AutoHotkey"
+- autohotkey only in windows and wsl installation
 
 
 
