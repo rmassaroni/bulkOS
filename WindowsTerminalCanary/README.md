@@ -3,10 +3,13 @@
 
 - Admin Command Prompt
 ```Command Prompt
-curl https://raw.githubusercontent.com/rmassaroni/bulkOS/arm/WindowsTerminalCanary/install.bat | cmd
+<!-- Windows Terminal -->
+curl https://raw.githubusercontent.com/rmassaroni/bulkOS/main/WindowsTerminalCanary/wt-install.bat | cmd
+<!-- Windows Terminal (Canary) -->
+curl https://raw.githubusercontent.com/rmassaroni/bulkOS/main/WindowsTerminalCanary/wtc-install.bat | cmd
 ```
 
-- Powershell, untested
+- Powershell, don't use this
 ```Powershell
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/rmassaroni/bulkOS/arm/WindowsTerminalCanary/install.bat" | Invoke-Expression
 ```
