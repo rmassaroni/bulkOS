@@ -3,9 +3,10 @@
 
 - Admin Command Prompt
 ```Command Prompt
-<!-- Windows Terminal -->
+:: Windows Terminal
 curl https://raw.githubusercontent.com/rmassaroni/bulkOS/main/WindowsTerminalCanary/wt-install.bat | cmd
-<!-- Windows Terminal (Canary) -->
+
+:: Windows Terminal (Canary)
 curl https://raw.githubusercontent.com/rmassaroni/bulkOS/main/WindowsTerminalCanary/wtc-install.bat | cmd
 ```
 
