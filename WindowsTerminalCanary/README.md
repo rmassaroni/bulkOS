@@ -25,3 +25,4 @@ Invoke-WebRequest -Uri "https://raw.githubusercontent.com/rmassaroni/bulkOS/arm/
 ### TODO
 - still need to update wtc-install.bat to be like the newer wt-install.bat
 - nerd font auto setup
+- wt preview
