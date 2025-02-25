@@ -56,6 +56,7 @@ Might just include rjvim curl inside install.sh
 - New-Item -ItemType SymbolicLink -Path "C:\Users\rjm\AutoHotkey" -Target "\\wsl$\Ubuntu\home\rjm\AutoHotkey"
 - autohotkey only in windows and wsl installation
 - ssh stuff but keep it private
+- In admin powershell: Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 
 
 
