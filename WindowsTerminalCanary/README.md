@@ -20,3 +20,8 @@ Invoke-WebRequest -Uri "https://raw.githubusercontent.com/rmassaroni/bulkOS/arm/
 - 0xProto Nerd Font
 - https://www.nerdfonts.com/font-downloads
 - will include in windows install script
+
+
+### TODO
+- still need to update wtc-install.bat to be like the newer wt-install.bat
+- nerd font auto setup
