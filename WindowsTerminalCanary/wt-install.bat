@@ -1,7 +1,7 @@
 @echo off
 setlocal
 
-:: Check if Windows Terminal is installed. will need to account for different path names
+REM :: Check if Windows Terminal is installed. will need to account for different path names
 IF EXIST "C:\Users\rjm\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe" (
     echo Windows Terminal is already installed.
 ) ELSE (
@@ -14,15 +14,15 @@ IF EXIST "C:\Users\rjm\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d
 
     echo Windows Terminal Canary has been installed.
 )
-:: needs testing
+REM :: needs testing
 
-:: Delete the existing settings.json if it exists. might change to backup instead
+REM :: Delete the existing settings.json if it exists. might change to backup instead
 IF EXIST "C:\Users\rjm\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json" (
     echo Deleting existing settings.json...
     del "C:\Users\rjm\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json"
 )
 
-:: Create symbolic link to WSL settings.json
+REM :: Create symbolic link to WSL settings.json
 echo Creating symbolic link for settings.json...
 mklink "C:\Users\rjm\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json" "\\wsl$\Ubuntu\home\rjm\dotfiles\WindowsTerminalCanary\settings.json"
 
