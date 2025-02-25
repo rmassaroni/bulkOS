@@ -10,11 +10,6 @@ if exist "%WT_PATH%" (
 ) ELSE (
     echo Windows Terminal is not installed. Installing now...
 
-
-    REM REM might use winget instead
-    REM powershell -Command "choco install microsoft-windows-terminal"
-    REM REM choco upgrade microsoft-windows-terminal
-
     :: Attempt to install with winget, fallback to choco if winget is not available
     winget install --id Microsoft.WindowsTerminal -e -h
     if %errorlevel% neq 0 (
@@ -41,19 +36,6 @@ if exist "%SETTINGS_PATH%" (
     echo Backing up existing settings.json...
     move /y "%SETTINGS_PATH%" "%SETTINGS_PATH%.backup"
 )
-
-REM REM :: Delete the existing settings.json if it exists. might change to backup instead
-REM IF EXIST "C:\Users\rjm\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json" (
-REM     echo Deleting existing settings.json...
-REM     del "C:\Users\rjm\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json"
-REM )
-REM
-REM REM :: Create symbolic link to WSL settings.json
-REM echo Creating symbolic link for settings.json...
-REM mklink "C:\Users\rjm\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json" "\\wsl$\Ubuntu\home\rjm\dotfiles\WindowsTerminalCanary\settings.json"
-REM
-REM echo Windows Terminal symlink setup completed.
-REM endlocal
 
 :: Create symbolic link for settings.json (WSL path)
 set WSL_SETTINGS="\\wsl$\Ubuntu\home\%USERNAME%\dotfiles\WindowsTerminalCanary\settings.json"
