@@ -1,4 +1,4 @@
-@echo off
+REM @echo off
 setlocal
 
 REM :: Check if Windows Terminal is installed. will need to account for different path names
