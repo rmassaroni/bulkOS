@@ -1,5 +1,7 @@
 #!/bin/zsh
 
+source $HOME/dotfiles/daily-welcome.sh
+
 # Quit sourcing during installation.
 if [ -z "$ZSH_VERSION" ]; then
     echo "This script requires Zsh. You are likely seeing this because the install script is not done yet. Exiting."
@@ -115,4 +117,3 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
-source $HOME/dotfiles/daily-welcome.sh
