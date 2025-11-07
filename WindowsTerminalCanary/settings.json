@@ -1,6 +1,6 @@
 {
     "$help": "https://aka.ms/terminal-documentation",
-    "$schema": "https://raw.githubusercontent.com/microsoft/terminal/main/doc/cascadia/profiles.schema.json",
+    "$schema": "https://aka.ms/terminal-profiles-schema",
     "actions": 
     [
         {
@@ -29,35 +29,35 @@
             "id": "User.splitPane.A6751878"
         }
     ],
-    "aiConfig": 
-    {
-        "activeProvider": "githubCopilot"
-    },
     "centerOnLaunch": true,
     "copyFormatting": "none",
     "copyOnSelect": false,
-    "firstWindowPreference": "defaultProfile",
     "defaultProfile": "{51855cb2-8cce-5362-8f54-464b92b32386}",
+    "firstWindowPreference": "defaultProfile",
     "initialCols": 160,
     "initialPosition": ",",
     "initialRows": 50,
     "keybindings": 
     [
         {
-            "id": "User.copy.644BA8F2",
+            "id": "Terminal.CopyToClipboard",
             "keys": "ctrl+c"
         },
         {
-            "id": "User.find",
+            "id": null,
             "keys": "ctrl+shift+f"
         },
         {
-            "id": "User.paste",
+            "id": null,
             "keys": "ctrl+v"
         },
         {
-            "id": "User.splitPane.A6751878",
+            "id": null,
             "keys": "alt+shift+d"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+shift+c"
         }
     ],
     "language": "en-US",
@@ -112,7 +112,7 @@
                 "historySize": 15000,
                 "intenseTextStyle": "bright",
                 "name": "Ubuntu",
-                "opacity": 90,
+                "opacity": 80,
                 "padding": "8, 8, 0, 8",
                 "source": "CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc",
                 "tabColor": "#1D3878",
