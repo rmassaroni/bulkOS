@@ -1,7 +1,6 @@
 WELCOME_FILE="$HOME/.last_welcome_date"
 TODAY=$(date +%Y-%m-%d)
-LAST_LOGIN_RAW="$(cat "$WELCOME_FILE")"
-LAST_LOGIN=$(date -d "$LAST_LOGIN_RAW" "+%a %b %d %Y" 2>/dev/null)
+LAST_LOGIN=$(date -d "$(cat "$WELCOME_FILE")" "+%a %b %d %Y" 2>/dev/null)
 
 if [[ ! -f "$WELCOME_FILE" || "$(cat "$WELCOME_FILE")" != "$TODAY" ]]; then
 fi
